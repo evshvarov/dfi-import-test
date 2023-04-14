@@ -8,7 +8,7 @@ services:
     command: --check-caps false
     ports: 
       - 1972
-      - 32792:52773
+      - 32793:52773
       - 53773
     volumes:
       - ./:/irisdev/app

@@ -3,6 +3,10 @@
     zn "USER"
     zpm "install isc-dev" 
     do ##class(dev.code).workdir("/irisdev/app/src")
+    zpm "install git-source-control"
+    do ##class(%Studio.SourceControl.Interface).SourceControlClassSet("SourceControl.Git.Extension")
+    
+
     ;zpm "install csvgen"
     ;set file="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/08-15-2022.csv"
     ;zw ##class(community.csvgen).GenerateFromURL(file,",","dc.irisbi.covid19")
